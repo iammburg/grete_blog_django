@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
+from django.conf.urls import handler404
+
+handler404 = "grete_blog.views.custom_404"
 
 urlpatterns = [
+    # homepage
+    path("", include("grete_blog.urls")),
     path("admin/", admin.site.urls),
+    # add route from grete_blog Application
+    path("blog/", include("grete_blog.urls")),
 ]

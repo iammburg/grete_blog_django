@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Aplikasi Blog
     "grete_blog",
+    # package untuk merender form pada template
+    "widget_tweaks",
 ]
 
 MIDDLEWARE = [
